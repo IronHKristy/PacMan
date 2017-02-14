@@ -1,0 +1,29 @@
+#board {
+  width: 749px;
+  background-color: black;
+}
+
+.square {
+  float: left;
+  /*width: 40px;
+  height: 40px;*/
+  /*border: 1px solid green;*/
+}
+
+.wall {
+  background-color: blue;
+  width: 40px;
+  height: 40px;
+}
+
+.space {
+  background-color: black;
+  width: 40px;
+  height: 40px;
+}
+
+.pacman {
+  background-color: red;
+  width: 40px;
+  height: 40px;
+}
