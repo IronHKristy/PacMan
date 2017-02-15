@@ -1,3 +1,4 @@
+
 html {
   /*background: url("rocks/brown-bg.jpg") no-repeat center center fixed;*/
   background-color: #2a2a2a;
@@ -18,7 +19,9 @@ html {
   background-repeat: no-repeat;
   width: 40px;
   height: 40px;
+  /*border: 1px solid green;*/
 }
+
 
 .nizar {
   background-image: url("rocks/nizar.png");
@@ -37,7 +40,6 @@ html {
 }
 
 .path-floor {
-  /*background-color: black;*/
   width: 40px;
   height: 40px;
 }

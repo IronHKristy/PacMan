@@ -16,7 +16,6 @@ var board = [
 ];
 
 
-
 function renderBoard () {
     //$('#board').empty();
 
@@ -43,8 +42,6 @@ function renderBoard () {
   });
 }
 
-
-
 //find pacman and return his position
 var rowA;
 var colB;
@@ -57,7 +54,8 @@ board.forEach(function (row, rowIndex) {
       colB = colIndex;
     }
   });
-});
+  });
+console.log(rowA + ', ' + colB);
 return rowA, colB;
 }
 
@@ -82,6 +80,7 @@ function moveLeft() {
     board[5][8] = 'pacman';
 
     $('#board').append(html);
+
   } else {
     return;
   }
@@ -94,7 +93,6 @@ function moveRight() {
   if(board[rowA][colB + 1] === 'path-floor') {
     board[rowA][colB + 1] = 'pacman';
     board[rowA][colB] = 'path-floor';
-
   } else {
     return;
   }
