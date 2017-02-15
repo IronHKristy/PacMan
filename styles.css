@@ -35,20 +35,24 @@ html {
   width: 40px;
   height: 40px;
 }
+/*
+#big-head {
+  background-image: url("rocks/nizarbig.png");
+}*/
 
-.wall-regular {
+.wall {
   background-image: url("rocks/brick-block.png");
   width: 40px;
   height: 40px;
 }
 
-.door1, .door2, .door3, .door4 {
+.eSign1, .eSign2, .eSign3, .eSign4 {
   background-image: url("rocks/exit.jpg");
   width: 40px;
   height: 40px;
 }
 
-.path-floor {
+.path {
   width: 40px;
   height: 40px;
 }

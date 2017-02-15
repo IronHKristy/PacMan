@@ -1,23 +1,23 @@
 var board = [
-  //column 0       column 1        column 2        column 3        column 4        column 5        column 6        column 7        column 8        column 9        column 10       column 11       column 12       column 13       column 14       column 15       column 16       column 17
-  ['wall',  'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall'],//row 0
-  ['door1', 'path',   'path',   'path',   'wall', 'path',   'path',   'path',   'path',   'path',   'path',   'path',   'path',   'wall', 'path',   'path',   'path',   'door2'       ],//row 1
-  ['wall',  'path',   'wall', 'path',   'path',   'path',   'wall', 'wall', 'path',   'path',   'wall', 'wall', 'path',   'path',   'path',   'wall', 'path',   'wall'],//row 2
-  ['wall',  'path',   'wall', 'wall', 'path',   'wall', 'path',   'path',   'path',   'path',   'path',   'path',   'wall', 'path',   'wall', 'wall', 'path',   'wall'],//row 3
-  ['wall', 'path',   'path',   'wall', 'path',   'path',   'path',   'wall', 'path',   'path',   'wall', 'path',   'path',   'path',   'wall', 'path',   'path',   'wall'],//row 4
-  ['wall', 'wall', 'path',   'wall', 'wall', 'path',   'wall', 'path',   'path',   'path',   'path',   'wall', 'path',   'wall', 'wall', 'path',   'wall', 'wall'],//row 5
-  ['pacman',       'path',   'path',   'path',   'path',   'path',   'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'path',   'path',   'path',   'path',   'path',   'path'  ],//row 6
-  ['wall', 'wall', 'path',   'wall', 'wall', 'path',   'path',   'path',   'path',   'path',   'path',   'path',   'path',   'wall', 'wall', 'path',   'wall', 'wall'],//row 7
-  ['wall', 'wall', 'path',   'wall', 'wall', 'wall', 'wall', 'wall', 'path',   'path',   'wall', 'wall', 'wall', 'wall', 'wall', 'path',   'wall', 'wall'],//row 8
-  ['wall', 'path',   'path',   'path',   'wall', 'wall', 'path',   'path',   'path',   'path',   'path',   'path',   'wall', 'wall', 'path',   'path',   'path',   'wall'],//row 9
-  ['wall', 'path',   'wall', 'path',   'path',   'path',   'path',   'wall', 'wall', 'wall', 'wall', 'path',   'path',   'path',   'path',   'wall', 'path',   'wall'],//row 10
-  ['door3',        'path',   'path',   'path',   'wall', 'wall', 'path',   'path',   'path',   'path',   'path',   'path',   'wall', 'wall', 'path',   'path',   'path',   'door4'       ],//row 11
-  ['wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall'],//row 12
-  ['wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall'],//row 13
-  ['wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall'],//row 14
-  ['wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall'],//row 15
-  ['wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall'],//row 16
-  ['wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall'] //row 17
+ //col 0     col 1   col 2   col 3   col 4   col 5   col 6   col 7   col 8   col 9   col 10  col 11  col 12  col 13  col 14  col 15  col 16  col 17
+  ['wall',   'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall' ],//row 0
+  ['eSign1', 'path', 'path', 'path', 'wall', 'path', 'path', 'path', 'path', 'path', 'path', 'path', 'path', 'wall', 'path', 'path', 'path', 'eSign2'],//row 1
+  ['wall',   'path', 'wall', 'path', 'path', 'path', 'wall', 'wall', 'path', 'path', 'wall', 'wall', 'path', 'path', 'path', 'wall', 'path', 'wall' ],//row 2
+  ['wall',   'path', 'wall', 'wall', 'path', 'wall', 'path', 'path', 'path', 'path', 'path', 'path', 'wall', 'path', 'wall', 'wall', 'path', 'wall' ],//row 3
+  ['wall',   'path', 'path', 'wall', 'path', 'path', 'path', 'wall', 'path', 'path', 'wall', 'path', 'path', 'path', 'wall', 'path', 'path', 'wall' ],//row 4
+  ['wall',   'wall', 'path', 'wall', 'wall', 'path', 'wall', 'path', 'path', 'path', 'path', 'wall', 'path', 'wall', 'wall', 'path', 'wall', 'wall' ],//row 5
+  ['pacman', 'path', 'path', 'path', 'path', 'path', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'path', 'path', 'path', 'path', 'path', 'path' ],//row 6
+  ['wall',   'wall', 'path', 'wall', 'wall', 'path', 'path', 'path', 'path', 'path', 'path', 'path', 'path', 'wall', 'wall', 'path', 'wall', 'wall' ],//row 7
+  ['wall',   'wall', 'path', 'wall', 'wall', 'wall', 'wall', 'wall', 'path', 'path', 'wall', 'wall', 'wall', 'wall', 'wall', 'path', 'wall', 'wall' ],//row 8
+  ['wall',   'path', 'path', 'path', 'wall', 'wall', 'path', 'path', 'path', 'path', 'path', 'path', 'wall', 'wall', 'path', 'path', 'path', 'wall' ],//row 9
+  ['wall',   'path', 'wall', 'path', 'path', 'path', 'path', 'wall', 'wall', 'wall', 'wall', 'path', 'path', 'path', 'path', 'wall', 'path', 'wall' ],//row 10
+  ['eSign3', 'path', 'path', 'path', 'wall', 'wall', 'path', 'path', 'path', 'path', 'path', 'path', 'wall', 'wall', 'path', 'path', 'path', 'eSign4'],//row 11
+  ['wall',   'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall' ],//row 12
+  ['wall',   'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall' ],//row 13
+  ['wall',   'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall' ],//row 14
+  ['wall',   'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall' ],//row 15
+  ['wall',   'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall' ],//row 16
+  ['wall',   'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall' ] //row 17
 ];
 
 
@@ -32,14 +32,14 @@ function renderBoard () {
         gridClass = 'path';
       } else if (grid === 'pacman') {
         gridClass = 'pacman';
-      } else if (grid === 'door1') {
-        gridClass = 'door1';
-      } else if (grid === 'door2') {
-        gridClass = 'door2';
-      } else if (grid === 'door3') {
-        gridClass = 'door3';
-      } else if (grid === 'door4') {
-        gridClass = 'door4';
+      } else if (grid === 'eSign1') {
+        gridClass = 'eSign1';
+      } else if (grid === 'eSign2') {
+        gridClass = 'eSign2';
+      } else if (grid === 'eSign3') {
+        gridClass = 'eSign3';
+      } else if (grid === 'eSign4') {
+        gridClass = 'eSign4';
       } else if (grid === 'nizar') {
         gridClass = 'nizar';
       }
@@ -117,7 +117,6 @@ function moveNizar() {
 
 //lose function
 
-
 //also tests for collision with wall and update position depending on results
 function moveLeft(row, col, character) {
   if
@@ -125,7 +124,7 @@ function moveLeft(row, col, character) {
     board[row][col - 1] = character;
     board[row][col] = 'path';
   } else if
-    (character === 'pacman' && board[row][col - 1] === 'door1') {
+    (character === 'pacman' && board[row][col - 1] === 'eSign1') {
       board[5][8] = character;
       board[1].splice(1, 1, "nizar");
 
