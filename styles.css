@@ -15,7 +15,7 @@ html {
 }
 
 .pacman {
-  background-image: url("rocks/man-right.png");
+  background-image: url("rocks/pizza.png");
   background-repeat: no-repeat;
   width: 40px;
   height: 40px;
@@ -25,6 +25,8 @@ html {
 
 .nizar {
   background-image: url("rocks/nizar.png");
+  width: 40px;
+  height: 40px;
 }
 
 .wall-regular {
@@ -33,7 +35,7 @@ html {
   height: 40px;
 }
 
-.door1 {
+.door1, .door2, .door3, .door4 {
   background-image: url("rocks/door.png");
   width: 40px;
   height: 40px;

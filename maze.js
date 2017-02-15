@@ -1,24 +1,27 @@
 var board = [
   //column 0       column 1        column 2        column 3        column 4        column 5        column 6        column 7        column 8        column 9        column 10       column 11       column 12       column 13       column 14       column 15       column 16       column 17
   ['wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular'],//row 0
-  ['door1',        'path-floor',   'path-floor',   'path-floor',   'wall-regular', 'path-floor',   'path-floor',   'path-floor',   'path-floor',   'path-floor',   'path-floor',   'path-floor',   'path-floor',   'wall-regular', 'path-floor',   'path-floor',   'path-floor',   'wall-regular'],//row 1
+  ['door1',        'path-floor',   'path-floor',   'path-floor',   'wall-regular', 'path-floor',   'path-floor',   'path-floor',   'path-floor',   'path-floor',   'path-floor',   'path-floor',   'path-floor',   'wall-regular', 'path-floor',   'path-floor',   'path-floor',   'door2'       ],//row 1
   ['wall-regular', 'path-floor',   'wall-regular', 'path-floor',   'path-floor',   'path-floor',   'wall-regular', 'wall-regular', 'path-floor',   'path-floor',   'wall-regular', 'wall-regular', 'path-floor',   'path-floor',   'path-floor',   'wall-regular', 'path-floor',   'wall-regular'],//row 2
   ['wall-regular', 'path-floor',   'wall-regular', 'wall-regular', 'path-floor',   'wall-regular', 'path-floor',   'path-floor',   'path-floor',   'path-floor',   'path-floor',   'path-floor',   'wall-regular', 'path-floor',   'wall-regular', 'wall-regular', 'path-floor',   'wall-regular'],//row 3
   ['wall-regular', 'path-floor',   'path-floor',   'wall-regular', 'path-floor',   'path-floor',   'path-floor',   'wall-regular', 'path-floor',   'path-floor',   'wall-regular', 'path-floor',   'path-floor',   'path-floor',   'wall-regular', 'path-floor',   'path-floor',   'wall-regular'],//row 4
   ['wall-regular', 'wall-regular', 'path-floor',   'wall-regular', 'wall-regular', 'path-floor',   'wall-regular', 'path-floor',   'path-floor',   'path-floor',   'path-floor',   'wall-regular', 'path-floor',   'wall-regular', 'wall-regular', 'path-floor',   'wall-regular', 'wall-regular'],//row 5
-  ['path-floor',   'pacman',       'path-floor',   'path-floor',   'path-floor',   'path-floor',   'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'path-floor',   'path-floor',   'path-floor',   'path-floor',   'path-floor',   'path-floor'  ],//row 6
+  ['pacman',       'path-floor',   'path-floor',   'path-floor',   'path-floor',   'path-floor',   'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'path-floor',   'path-floor',   'path-floor',   'path-floor',   'path-floor',   'path-floor'  ],//row 6
   ['wall-regular', 'wall-regular', 'path-floor',   'wall-regular', 'wall-regular', 'path-floor',   'path-floor',   'path-floor',   'path-floor',   'path-floor',   'path-floor',   'path-floor',   'path-floor',   'wall-regular', 'wall-regular', 'path-floor',   'wall-regular', 'wall-regular'],//row 7
   ['wall-regular', 'wall-regular', 'path-floor',   'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'path-floor',   'path-floor',   'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'path-floor',   'wall-regular', 'wall-regular'],//row 8
   ['wall-regular', 'path-floor',   'path-floor',   'path-floor',   'wall-regular', 'wall-regular', 'path-floor',   'path-floor',   'path-floor',   'path-floor',   'path-floor',   'path-floor',   'wall-regular', 'wall-regular', 'path-floor',   'path-floor',   'path-floor',   'wall-regular'],//row 9
   ['wall-regular', 'path-floor',   'wall-regular', 'path-floor',   'path-floor',   'path-floor',   'path-floor',   'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'path-floor',   'path-floor',   'path-floor',   'path-floor',   'wall-regular', 'path-floor',   'wall-regular'],//row 10
-  ['wall-regular', 'path-floor',   'path-floor',   'path-floor',   'wall-regular', 'wall-regular', 'path-floor',   'path-floor',   'path-floor',   'path-floor',   'path-floor',   'path-floor',   'wall-regular', 'wall-regular', 'path-floor',   'path-floor',   'path-floor',   'wall-regular'],//row 11
-  ['wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular'] //row 12
+  ['door3',        'path-floor',   'path-floor',   'path-floor',   'wall-regular', 'wall-regular', 'path-floor',   'path-floor',   'path-floor',   'path-floor',   'path-floor',   'path-floor',   'wall-regular', 'wall-regular', 'path-floor',   'path-floor',   'path-floor',   'door4'       ],//row 11
+  ['wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular'],//row 12
+  ['wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular'],//row 13
+  ['wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular'],//row 14
+  ['wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular'],//row 15
+  ['wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular'],//row 16
+  ['wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular', 'wall-regular'] //row 17
 ];
 
 
 function renderBoard () {
-    //$('#board').empty();
-
   $('#board').empty();
   board.forEach(function (row) {
     row.forEach(function (grid) {
@@ -31,16 +34,22 @@ function renderBoard () {
         gridClass = 'pacman';
       } else if (grid === 'door1') {
         gridClass = 'door1';
-}
-        //don't think this will work because this code has already ran once function is called
-      // } else if (grid === 'nizar')
-      //   gridClass = 'nizar';
+      } else if (grid === 'door2') {
+        gridClass = 'door2';
+      } else if (grid === 'door3') {
+        gridClass = 'door3';
+      } else if (grid === 'door4') {
+        gridClass = 'door4';
+      } else if (grid === 'nizar') {
+        gridClass = 'nizar';
+      }
       var html = '<div class="square ' + gridClass + '"></div>';
-
       $('#board').append(html);
     });
   });
 }
+
+
 
 //find pacman and return his position
 var rowA;
@@ -55,31 +64,70 @@ board.forEach(function (row, rowIndex) {
     }
   });
   });
-console.log(rowA + ', ' + colB);
 return rowA, colB;
 }
 
+
+//find nizar and return his position
+var rowC;
+var colD;
+
+function findNizar() {
+board.forEach(function (row, rowIndex) {
+  row.forEach(function (col, colIndex) {
+    if(col === 'nizar') {
+      rowC = rowIndex;
+      colD = colIndex;
+    }
+  });
+});
+  return rowC, colD;
+}
+
+// move nizar based on random number generator
+// 0 - 3
+
+function moveNizar() {
+  findNizar();
+  // console.log(randomDir);
+  if (rowC === undefined || colD === undefined) {
+    return;
+  }
+
+  var randomDir = Math.floor(Math.random() * 4);
+
+  switch(randomDir) {
+    case 0:
+      moveUp(rowC, colD, 'nizar');
+      break;
+    case 1:
+      moveDown(rowC, colD, 'nizar');
+      break;
+    case 2:
+      moveLeft(rowC, colD, 'nizar');
+      break;
+    case 3:
+      moveRight(rowC, colD, 'nizar');
+      break;
+  }
+  return;
+}
+
+
+//lose function
+
+
 //also tests for collision with wall and update position depending on results
-function moveLeft() {
-  findTwo();
+function moveLeft(row, col, character) {
   if
-    (board[rowA][colB - 1] === 'path-floor') {
-    board[rowA][colB - 1] = 'pacman';
-    board[rowA][colB] = 'path-floor';
+    (board[row][col - 1] === 'path-floor') {
+    board[row][col - 1] = character;
+    board[row][col] = 'path-floor';
   } else if
-    (board[rowA][colB - 1] === 'door1') {
+    (character === 'pacman' && board[row][col - 1] === 'door1') {
+      board[5][8] = character;
+      board[1].splice(1, 1, "nizar");
 
-      gridClass = 'nizar';
-      var html = '<div class="square ' + gridClass + '"></div>';
-
-
-    board[1][1] = 'nizar';
-    console.log(board[rowA][colB]);
-    board[rowA][colB] = 'path-floor/';
-    // board[1][0] = 'door1';
-    board[5][8] = 'pacman';
-
-    $('#board').append(html);
 
   } else {
     return;
@@ -88,11 +136,11 @@ function moveLeft() {
 }
 
 
-function moveRight() {
-  findTwo();
-  if(board[rowA][colB + 1] === 'path-floor') {
-    board[rowA][colB + 1] = 'pacman';
-    board[rowA][colB] = 'path-floor';
+function moveRight(row, col, character) {
+
+  if(board[row][col + 1] === 'path-floor') {
+    board[row][col + 1] = character;
+    board[row][col] = 'path-floor';
   } else {
     return;
   }
@@ -109,16 +157,16 @@ function transposeMatrix () {
   }
 }
 
-function moveUp () {
+function moveUp (row, col, character) {
   transposeMatrix();
-  moveLeft();
+  moveLeft(col, row, character);
   transposeMatrix();
   renderBoard();
 }
 
-function moveDown () {
+function moveDown (row, col, character) {
   transposeMatrix();
-  moveRight();
+  moveRight(col, row, character);
   transposeMatrix();
   renderBoard();
 }
@@ -130,20 +178,23 @@ $(document).keydown(function(ev) {
       return;
     }
     ev.preventDefault();
+    findTwo();
     switch(ev.keyCode) {
       case 38:
-        moveUp();
+        moveUp(rowA, colB, 'pacman');
         break;
       case 40:
-        moveDown();
+        moveDown(rowA, colB, 'pacman');
         break;
       case 37:
-        moveLeft();
+        moveLeft(rowA, colB, 'pacman');
         break;
       case 39:
-        moveRight();
+        moveRight(rowA, colB, 'pacman');
         break;
     }
+
+    moveNizar();
   });
 
 renderBoard();
