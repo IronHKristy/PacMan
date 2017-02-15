@@ -1,13 +1,20 @@
 
 html {
   /*background: url("rocks/brown-bg.jpg") no-repeat center center fixed;*/
-  background-color: #2a2a2a;
+  /*background-color: #2a2a2a;*/
+  background-image: url("rocks/outer-space-pizza.png");
+  /*background-repeat: no-repeat;*/
 }
 
 #board {
   width: 749px;
   background-color: black;
   margin: auto;
+  margin-top: 144px;
+}
+
+#title {
+  font: green 50px;
 }
 
 .square {
@@ -30,13 +37,13 @@ html {
 }
 
 .wall-regular {
-  background-image: url("rocks/rock1.png");
+  background-image: url("rocks/brick-block.png");
   width: 40px;
   height: 40px;
 }
 
 .door1, .door2, .door3, .door4 {
-  background-image: url("rocks/door.png");
+  background-image: url("rocks/exit.jpg");
   width: 40px;
   height: 40px;
 }
