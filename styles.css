@@ -1,0 +1,43 @@
+html {
+  /*background: url("rocks/brown-bg.jpg") no-repeat center center fixed;*/
+  background-color: #2a2a2a;
+}
+
+#board {
+  width: 749px;
+  background-color: black;
+  margin: auto;
+}
+
+.square {
+  float: left;
+}
+
+.pacman {
+  background-image: url("rocks/man-right.png");
+  background-repeat: no-repeat;
+  width: 40px;
+  height: 40px;
+}
+
+.nizar {
+  background-image: url("rocks/nizar.png");
+}
+
+.wall-regular {
+  background-image: url("rocks/rock1.png");
+  width: 40px;
+  height: 40px;
+}
+
+.door1 {
+  background-image: url("rocks/door.png");
+  width: 40px;
+  height: 40px;
+}
+
+.path-floor {
+  /*background-color: black;*/
+  width: 40px;
+  height: 40px;
+}
