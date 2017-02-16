@@ -42,7 +42,14 @@ function renderBoard () {
         gridClass = 'eSign4';
       } else if (grid === 'nizar') {
         gridClass = 'nizar';
+      } else if (grid === 'nizar2') {
+        gridClass = 'nizar2';
+      } else if (grid === 'nizar3') {
+        gridClass = 'nizar3';
+      } else if (grid === 'nizar4') {
+        gridClass = 'nizar4';
       }
+
       var html = '<div class="square ' + gridClass + '"></div>';
       $('#board').append(html);
     });
@@ -86,10 +93,21 @@ board.forEach(function (row, rowIndex) {
 
 // move nizar based on random number generator
 // 0 - 3
+function eatPizza() {
+  findNizar();
+  findPizza();
+  // if(rowB - 1 === rowA || rowB + 1 === rowA || colB - 1 === colA || colB + 1 === colA) {
+  if(((rowB - 1 === rowA) && (colB === colA)) || ((rowB + 1 === rowA) && (colB === colA))) {
+  } else if (((rowB === rowA) && (colB - 1 === colA)) || ((rowB === rowA) && (colB + 1 === colA))) {
+
+    alert("You've been eaten!");
+    console.log("rowB = " + rowB + ". rowA = " + rowA + ". colA = " + colA + ". colB = " + colB);
+  }
+}
 
 function moveNizar() {
   findNizar();
-  // console.log(randomDir);
+
   if (rowB === undefined || colB === undefined) {
     return;
   }
@@ -115,8 +133,6 @@ function moveNizar() {
 }
 
 
-//lose function
-
 //also tests for collision with wall and update position depending on results
 function moveLeft(row, col, character) {
   if
@@ -125,10 +141,11 @@ function moveLeft(row, col, character) {
     board[row][col] = 'path';
   } else if
     (character === 'pizza' && board[row][col - 1] === 'eSign1') {
+      //Stee broke this
+      board[1][1] = "path";
       board[5][8] = character;
       board[1].splice(1, 1, "nizar");
-
-
+      console.log(board);
   } else {
     return;
   }
@@ -195,8 +212,10 @@ $(document).keydown(function(ev) {
     }
 
     moveNizar();
-    moveNizar();
-    moveNizar();
+    eatPizza();
+    // moveNizar();
+    // moveNizar();
+    // moveNizar2();
   });
 
 renderBoard();
