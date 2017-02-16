@@ -91,27 +91,27 @@ board.forEach(function (row, rowIndex) {
   return rowB, colB;
 }
 
-// move nizar based on random number generator
-// 0 - 3
-function eatPizza() {
+function pizzaLose() {
   findNizar();
   findPizza();
-  // if(rowB - 1 === rowA || rowB + 1 === rowA || colB - 1 === colA || colB + 1 === colA) {
-  if(((rowB - 1 === rowA) && (colB === colA)) || ((rowB + 1 === rowA) && (colB === colA))) {
-  } else if (((rowB === rowA) && (colB - 1 === colA)) || ((rowB === rowA) && (colB + 1 === colA))) {
+    if(((rowB - 1 === rowA) && (colB === colA)) || ((rowB + 1 === rowA) && (colB === colA)) ||
+    ((rowB === rowA) && (colB - 1 === colA)) || ((rowB === rowA) && (colB + 1 === colA))) {
 
-    alert("You've been eaten!");
-    console.log("rowB = " + rowB + ". rowA = " + rowA + ". colA = " + colA + ". colB = " + colB);
-  }
+      alert("You've been eaten!");
+      $('#board').empty();
+    $('#pic').append('<img src="https://media.giphy.com/media/ZUiVM7qj7X3A4/giphy.gif">');
+
+  }return;
 }
 
+// move nizar based on random number generator
+// 0 - 3
 function moveNizar() {
   findNizar();
 
   if (rowB === undefined || colB === undefined) {
     return;
   }
-
 
   var randomDir = Math.floor(Math.random() * 4);
 
@@ -145,7 +145,6 @@ function moveLeft(row, col, character) {
       board[1][1] = "path";
       board[5][8] = character;
       board[1].splice(1, 1, "nizar");
-      console.log(board);
   } else {
     return;
   }
@@ -212,10 +211,7 @@ $(document).keydown(function(ev) {
     }
 
     moveNizar();
-    eatPizza();
-    // moveNizar();
-    // moveNizar();
-    // moveNizar2();
+    pizzaLose();
   });
 
 renderBoard();

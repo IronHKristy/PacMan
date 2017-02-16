@@ -35,10 +35,7 @@ html {
   width: 40px;
   height: 40px;
 }
-/*
-#big-head {
-  background-image: url("rocks/nizarbig.png");
-}*/
+
 
 .wall {
   background-image: url("rocks/brick-block.png");
