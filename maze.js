@@ -99,7 +99,7 @@ function pizzaLose() {
 
       alert("You've been eaten!");
       $('#board').empty();
-    $('#pic').append('<img src="https://media.giphy.com/media/ZUiVM7qj7X3A4/giphy.gif">');
+      $('#pic').append('<img src="https://media.giphy.com/media/ZUiVM7qj7X3A4/giphy.gif">');
 
   }return;
 }

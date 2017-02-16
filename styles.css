@@ -36,6 +36,9 @@ html {
   height: 40px;
 }
 
+#pic {
+  margin-left: 367px;
+}
 
 .wall {
   background-image: url("rocks/brick-block.png");
