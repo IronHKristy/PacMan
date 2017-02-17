@@ -56,6 +56,7 @@ function renderBoard () {
   });
 }
 
+//function that will at start assign random winning door
 
 
 //find pizza and return his position
@@ -217,6 +218,7 @@ $(document).keydown(function(ev) {
     moveNizar();
     // moveNomad();
     pizzaLose();
+    letsWin(ev.keyCode);
   });
 
 renderBoard();
