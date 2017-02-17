@@ -5,7 +5,9 @@ var winDirection;
 
 function assignWinningDoor(){
 var exitDoorWin = Math.floor(Math.random() * randomExit.length);
-console.log("exit door is " + exitDoorWin);
+var spliceWinningDoor = randomExit.splice(exitDoorWin, 1);
+console.log("exit door is at array index of " + exitDoorWin);
+console.log(randomExit);
 
 switch(exitDoorWin) {
 case 0:
@@ -28,7 +30,7 @@ case 3:
   winPos = [11,16];
   winDirection = 39;
   break;
-} console.log(winningDoor);
+} console.log("the winning door has been assigned to " + winningDoor);
 }
 
 assignWinningDoor();

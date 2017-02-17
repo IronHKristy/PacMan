@@ -1,92 +1,43 @@
-//find nomad and return his position
-var rowC;
-var colC;
+function moveNizar() {
+  findNizar();
 
-function findNomad() {
-board.forEach(function (row, rowIndex) {
-  row.forEach(function (col, colIndex) {
-    if(col === 'nomad') {
-      rowC = rowIndex;
-      colC = colIndex;
-    }
-  });
-});
-  return rowC, colC;
+//if Nizar isn't on board yet, exit function.
+  if (rowB === undefined || colB === undefined) {
+      return;
 }
 
-// move nomad based on random number generator
-// 0 - 3
-
-function moveNomad() {
-  findNomad();
-  // findNomad2();
-  // console.log(randomDir);
-  if (rowC === undefined || colC === undefined) {
-    return;
-  }
-
-
-  var randomDir = Math.floor(Math.random() * 4);
-
-  switch(randomDir) {
-    case 0:
-      moveUp(rowC, colC, 'nomad');
-      break;
-    case 1:
-      moveDown(rowC, colC, 'nomad');
-      break;
-    case 2:
-      moveLeft(rowC, colC, 'nomad');
-      break;
-    case 3:
-      moveRight(rowC, colC, 'nomad');
-      break;
-  }
-  return;
+//test directions and push available ones to array
+var testDirections = [];
+if (rowB - 1 === 'path') {
+  testDirections.push('left');
+}
+if (rowB + 1 === 'path') {
+  testDirections.push('right');
+}
+if (colB - 1 === 'path') {
+  testDirections.push('up');
+}
+if (colB + 1 === 'path') {
+  testDirections.push('down');
 }
 
+//store that array in availDirections then randomly pick one
+var availDirections = Math.floor(Math.random() * testDirections.length);
 
-//lose function
 
-//also tests for collision with wall and update position depending on results
-function moveLeft(row, col, character) {
-  if
-    (board[row][col - 1] === 'path') {
-    board[row][col - 1] = character;
-    board[row][col] = 'path';
-  } else {
-    return;
-  }
-  renderBoard();
+switch(availDirections) {
+  case 'up':
+    moveUp(rowB, colB, 'nizar');
+    break;
+  case 'down':
+    moveDown(rowB, colB, 'nizar');
+    break;
+  case 'left':
+    moveLeft(rowB, colB, 'nizar');
+    break;
+  case 'right':
+    moveRight(rowB, colB, 'nizar');
+    break;
 }
-
-
-function moveRight(row, col, character) {
-
-  if(board[row][col + 1] === 'path') {
-    board[row][col + 1] = character;
-    board[row][col] = 'path';
-  } else if
-    (character === 'pizza' && board[row][col + 1] === 'eSign2') {
-      board[5][8] = character;
-      board[1].splice(1, 16, "nomad");
-  } else {
-    return;
-  }
-  renderBoard();
-}
-
-
-function moveUp (row, col, character) {
-  transposeMatrix();
-  moveLeft(col, row, character);
-  transposeMatrix();
-  renderBoard();
-}
-
-function moveDown (row, col, character) {
-  transposeMatrix();
-  moveRight(col, row, character);
-  transposeMatrix();
-  renderBoard();
+return;
 }

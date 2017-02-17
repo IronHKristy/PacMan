@@ -42,12 +42,6 @@ function renderBoard () {
         gridClass = 'eSign4';
       } else if (grid === 'nizar') {
         gridClass = 'nizar';
-      // } else if (grid === 'nomad') {
-      //   gridClass = 'nomad';
-      } else if (grid === 'nizar3') {
-        gridClass = 'nizar3';
-      } else if (grid === 'nizar4') {
-        gridClass = 'nizar4';
       }
 
       var html = '<div class="square ' + gridClass + '"></div>';
@@ -93,13 +87,11 @@ board.forEach(function (row, rowIndex) {
 }
 
 function pizzaLose() {
-  findNizar();
-  // findNomad();
-  findPizza();
+    findPizza();
+    findNizar();
     if(((rowB - 1 === rowA) && (colB === colA)) || ((rowB + 1 === rowA) && (colB === colA)) ||
     ((rowB === rowA) && (colB - 1 === colA)) || ((rowB === rowA) && (colB + 1 === colA))) {
 
-      alert("You've been eaten!");
       $('#board').empty();
       $('#pic').append('<img src="https://media.giphy.com/media/ZUiVM7qj7X3A4/giphy.gif">');
 
@@ -108,32 +100,54 @@ function pizzaLose() {
 
 // move nizar based on random number generator
 // 0 - 3
+
 function moveNizar() {
   findNizar();
 
+//if Nizar isn't on board yet, exit function.
   if (rowB === undefined || colB === undefined) {
-    return;
-  }
-
-  var randomDir = Math.floor(Math.random() * 4);
-
-  switch(randomDir) {
-    case 0:
-      moveUp(rowB, colB, 'nizar');
-      break;
-    case 1:
-      moveDown(rowB, colB, 'nizar');
-      break;
-    case 2:
-      moveLeft(rowB, colB, 'nizar');
-      break;
-    case 3:
-      moveRight(rowB, colB, 'nizar');
-      break;
-  }
-  return;
+      return;
 }
 
+//test directions and push available ones to array
+var testDirections = [];
+if (board[rowB][colB - 1]   === 'path') {
+  testDirections.push('left');
+}
+if (board[rowB][colB + 1] === 'path') {
+  testDirections.push('right');
+}
+if (board[rowB - 1][colB] === 'path') {
+  testDirections.push('up');
+}
+if (board[rowB + 1][colB] === 'path') {
+  testDirections.push('down');
+}
+console.log("test directions: " + testDirections);
+
+
+//store that array in availDirections then randomly pick one
+var randomN =  Math.floor(Math.random() * testDirections.length);
+var chooseDirection = testDirections[randomN];
+console.log("chosen direction is " + chooseDirection);
+
+
+switch(chooseDirection) {
+  case 'up':
+    moveUp(rowB, colB, 'nizar');
+    break;
+  case 'down':
+    moveDown(rowB, colB, 'nizar');
+    break;
+  case 'left':
+    moveLeft(rowB, colB, 'nizar');
+    break;
+  case 'right':
+    moveRight(rowB, colB, 'nizar');
+    break;
+}
+return;
+}
 
 //also tests for collision with wall and update position depending on results
 function moveLeft(row, col, character) {
@@ -200,6 +214,8 @@ $(document).keydown(function(ev) {
     ev.preventDefault();
     letsWin(keyDir);
     findPizza();
+    moveNizar();
+
     switch(ev.keyCode) {
       case 38:
         moveUp(rowA, colA, 'pizza');
@@ -214,11 +230,9 @@ $(document).keydown(function(ev) {
         moveRight(rowA, colA, 'pizza');
         break;
     }
-
-    moveNizar();
-    // moveNomad();
+    // steveLibrary.moveNizars();
     pizzaLose();
     letsWin(ev.keyCode);
   });
-
+// var steveLibrary = new Nizar();
 renderBoard();
