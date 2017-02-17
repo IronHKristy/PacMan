@@ -42,8 +42,8 @@ function renderBoard () {
         gridClass = 'eSign4';
       } else if (grid === 'nizar') {
         gridClass = 'nizar';
-      } else if (grid === 'nizar2') {
-        gridClass = 'nizar2';
+      // } else if (grid === 'nomad') {
+      //   gridClass = 'nomad';
       } else if (grid === 'nizar3') {
         gridClass = 'nizar3';
       } else if (grid === 'nizar4') {
@@ -93,6 +93,7 @@ board.forEach(function (row, rowIndex) {
 
 function pizzaLose() {
   findNizar();
+  // findNomad();
   findPizza();
     if(((rowB - 1 === rowA) && (colB === colA)) || ((rowB + 1 === rowA) && (colB === colA)) ||
     ((rowB === rowA) && (colB - 1 === colA)) || ((rowB === rowA) && (colB + 1 === colA))) {
@@ -193,7 +194,10 @@ $(document).keydown(function(ev) {
     if (!acceptableKeys.includes(ev.keyCode)) {
       return;
     }
+
+   var keyDir = ev.keyCode;
     ev.preventDefault();
+    letsWin(keyDir);
     findPizza();
     switch(ev.keyCode) {
       case 38:
@@ -211,6 +215,7 @@ $(document).keydown(function(ev) {
     }
 
     moveNizar();
+    // moveNomad();
     pizzaLose();
   });
 
