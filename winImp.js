@@ -42,7 +42,6 @@ function letsWin(blah) {
   findPizza();
 
   if ((rowA === winPos[0] && colA === winPos[1]) && (blah === winDirection)) {
-    alert("You Win");
     $('#board').empty();
     $('#winPic').append('<img src="https://media.giphy.com/media/3o7TKqrD0WxaE9ivDi/giphy.gif">');
   }
